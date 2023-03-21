@@ -1,7 +1,10 @@
 import React from 'react'
+import './Login .css'
 
 export const Login = () => {
   return (
-    <div>Login</div>
+    <div className='loginDesign'>
+      a
+    </div>
   )
 }
