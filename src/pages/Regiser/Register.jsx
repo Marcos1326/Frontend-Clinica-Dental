@@ -5,6 +5,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 export const Register = () => {
+
+  
+
   return (
     <div className='registerDesign'>
       <div className='formDesign'>
