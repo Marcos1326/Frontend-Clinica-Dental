@@ -45,14 +45,14 @@ export const Register = () => {
   return (
     <div className='registerDesign'>
       <div>
-        <Row className='txtImgDesign'>
-          <Col className='txtDesign'>
+        <Row className='txtImgDesignRegister'>
+          <Col className='txtDesignRegister'>
             <p className='txt'>¡Bienvenido Nakama!</p>
           </Col>
           
         </Row>
         <Row>
-          <Col className='txtDesign'>
+          <Col>
             <img src="/src/img/pirata2.png" className='pirataDesign'/>
           </Col>
           <Col className='formDesign'> 
@@ -102,7 +102,7 @@ export const Register = () => {
               </button>
             </div>
           </Col>
-          <Col className='txtDesign'>
+          <Col >
             <img src="/src/img/pirata3.png" className='pirataDesign'/>
           </Col>
         </Row>

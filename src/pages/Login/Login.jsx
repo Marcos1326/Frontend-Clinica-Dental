@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import './Login .css'
+import './Login.css'
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Button from 'react-bootstrap/Button';
 import { InputText } from '../../common/Input/Input';
 import { loginMe } from '../../services/apiCalls';
 import { decodeToken } from 'react-jwt';
@@ -48,31 +47,44 @@ export const Login = () => {
 
   return (
     <div className='loginDesign'>
-      <Row>
-        <Col className='formDesign'>
-          <div className='inputsDesign'>
-            <InputText
-              type="email"
-              name="email"
-              placeholder="escribe un email"
+      <div>
+        <Row>
+        <Col className='txtDesignLogin'>
+            <p className='txtLogin'>¡Me alegra verte <br/> de nuevo Nakama!</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <img src="/src/img/pirata2.png" className='pirataDesign'/>
+          </Col>
+          <Col className='formDesign'>
+            <div className='inputsDesign'>
+              <InputText
+                type="email"
+                name="email"
+                placeholder="escribe un email"
+                changeFunction={(e) => inputHandler(e)}
+              />
+            </div>
+            <div className='inputsDesign'>
+              <InputText
+              type="password"
+              name="password"
+              placeholder="pasword"
               changeFunction={(e) => inputHandler(e)}
-            />
-          </div>
-          <div className='inputsDesign'>
-            <InputText
-            type="password"
-            name="password"
-            placeholder="pasword"
-            changeFunction={(e) => inputHandler(e)}
-            />
-          </div>
-          <div className='inputsDesign'>
-            <Button variant="primary" onClick={() => logeame()}>
-              Iniciar sesión
-            </Button>
-          </div>
-        </Col>
-      </Row>
+              />
+            </div>
+            <div className='inputsDesign'>
+              <button variant="primary" className='botonDesignLogin' onClick={() => logeame()}>
+                Log Me
+              </button>
+            </div>
+          </Col>
+          <Col>
+            <img src="/src/img/diente.png" className='pirataDesign'/>
+          </Col>
+        </Row>
+      </div>
     </div>
   )
 }
