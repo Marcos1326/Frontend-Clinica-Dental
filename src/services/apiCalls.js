@@ -7,5 +7,7 @@ export const loginMe = async (body) => {
 }
 
 export const registerMe = async (body) => {
+
     return await axios.post(`${root}/register`,body)
+    
 }

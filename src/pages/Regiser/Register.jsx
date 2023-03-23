@@ -6,8 +6,11 @@ import { InputText } from '../../common/Input/Input';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { registerMe } from '../../services/apiCalls';
+import { useNavigate } from 'react-router-dom';
 
 export const Register = () => {
+  const navigate = useNavigate()
 
    // Hook 
   const [credenciales, setCredenciales] = useState({
@@ -26,6 +29,20 @@ export const Register = () => {
     }));
   };
   
+  //Funcion que registra al usuario
+  const registerfunction = () => {
+    registerMe(credenciales)
+
+    .then(
+      userData => {
+        setTimeout(() => {
+          navigate("/login")
+        },1000)
+      }
+    )
+    .catch (error => console.log(error))
+  }
+
   return (
     <div className='registerDesign'>
       <div>
@@ -77,7 +94,7 @@ export const Register = () => {
               />
             </div>
             <div className='inputsDesign'>
-              <Button variant="primary" type="submit">
+              <Button variant="primary"  onClick={() => registerfunction()}>
                 Registrarse
               </Button>
             </div>
