@@ -1,41 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Register.css'
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { InputText } from '../../common/Input/Input';
 
 export const Register = () => {
 
+   // Hook 
+  const [credenciales, setCredenciales] = useState({
+    name:"",
+    surname:"",
+    phone:"",
+    email: "",
+    password: "",
+  });
   
-
+  // Imput handler para los imputs de login seteo de credentials 
+  const inputHandler = (e) => {
+    setCredenciales((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.value,
+    }));
+  };
+  
   return (
     <div className='registerDesign'>
       <div className='formDesign'>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="name" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Surname</Form.Label>
-            <Form.Control type="text" placeholder="surname" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Phone</Form.Label>
-            <Form.Control type="text" placeholder="phone" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="email" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="password" />
-          </Form.Group>
+            <InputText
+              type="text"
+              name="name"
+              placeholder="name"
+              changeFunction={(e) => inputHandler(e)}
+            />
+            <InputText
+              type="text"
+              name="surname"
+              placeholder="surname"
+              changeFunction={(e) => inputHandler(e)}
+            />
+            <InputText
+              type="text"
+              name="phone"
+              placeholder="phone"
+              changeFunction={(e) => inputHandler(e)}
+            />
+            <InputText
+              type="email"
+              name="email"
+              placeholder="escribe un email"
+              changeFunction={(e) => inputHandler(e)}
+            />
+            <InputText
+              type="password"
+              name="password"
+              placeholder="password"
+              changeFunction={(e) => inputHandler(e)}
+            />
           <Button variant="primary" type="submit">
             Registrarse
           </Button>
-      </Form>
       </div>
     </div>
   )
