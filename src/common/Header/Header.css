@@ -5,3 +5,9 @@
 .imgNavbar{
     height: 7vh;
 }
+
+@media (max-width: 992px){
+    .imgNavbar{
+        height: 0;
+    }
+}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Register.css'
 
-import Button from 'react-bootstrap/Button';
 import { InputText } from '../../common/Input/Input';
 
 import Row from 'react-bootstrap/Row';
@@ -46,11 +45,15 @@ export const Register = () => {
   return (
     <div className='registerDesign'>
       <div>
+        <Row className='txtImgDesign'>
+          <Col className='txtDesign'>
+            <p className='txt'>¡Bienvenido Nakama!</p>
+          </Col>
+          
+        </Row>
         <Row>
-          <Col className='formDesign'>
-            <div className='colimgDesign'>
-              img1
-            </div>
+          <Col className='txtDesign'>
+            <img src="/src/img/pirata2.png" className='pirataDesign'/>
           </Col>
           <Col className='formDesign'> 
             <div className='inputsDesign'>
@@ -94,16 +97,13 @@ export const Register = () => {
               />
             </div>
             <div className='inputsDesign'>
-              <Button variant="primary"  onClick={() => registerfunction()}>
+              <button variant="primary" className='botonDesign' onClick={() => registerfunction()}>
                 Registrarse
-              </Button>
+              </button>
             </div>
-            
           </Col>
-          <Col className='formDesign '>
-            <div className='colimgDesign'>
-              img2
-            </div>
+          <Col className='txtDesign'>
+            <img src="/src/img/pirata3.png" className='pirataDesign'/>
           </Col>
         </Row>
       </div>

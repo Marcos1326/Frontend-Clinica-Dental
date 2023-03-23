@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Login .css'
 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import Button from 'react-bootstrap/Button';
 import { InputText } from '../../common/Input/Input';
 import { loginMe } from '../../services/apiCalls';
@@ -45,23 +48,31 @@ export const Login = () => {
 
   return (
     <div className='loginDesign'>
-      <div className='imputsDesign'>
+      <Row>
+        <Col className='formDesign'>
+          <div className='inputsDesign'>
             <InputText
               type="email"
               name="email"
               placeholder="escribe un email"
               changeFunction={(e) => inputHandler(e)}
             />
+          </div>
+          <div className='inputsDesign'>
             <InputText
             type="password"
             name="password"
             placeholder="pasword"
             changeFunction={(e) => inputHandler(e)}
             />
-          <Button variant="primary" onClick={() => logeame()}>
-            Iniciar sesión
-          </Button>
-      </div>
+          </div>
+          <div className='inputsDesign'>
+            <Button variant="primary" onClick={() => logeame()}>
+              Iniciar sesión
+            </Button>
+          </div>
+        </Col>
+      </Row>
     </div>
   )
 }
