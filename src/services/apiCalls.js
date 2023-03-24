@@ -11,3 +11,8 @@ export const registerMe = async (body) => {
     return await axios.post(`${root}/register`,body)
     
 }
+export const profile = async (body) => {
+
+    return await axios.get(`${root}/profile`,body)
+    
+}

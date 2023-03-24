@@ -7,8 +7,15 @@ import Col from 'react-bootstrap/Col';
 import { InputText } from '../../common/Input/Input';
 import { loginMe } from '../../services/apiCalls';
 import { decodeToken } from 'react-jwt';
+import { login } from '../userSlice';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 export const Login = () => {
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   // Hook 
   const [credenciales, setCredenciales] = useState({
@@ -25,20 +32,27 @@ export const Login = () => {
   };
   
   // funcion para loguear 
-  const logeame = async () => {
+  const logeame = () => {
       try {
-        console.log('1');
-        const loginResult = await loginMe(credenciales)
-        console.log(loginResult);
-
-        if (loginResult.data.success) {
-          try {
-            console.log(loginResult);
-            const decoded = decodeToken(loginResult)
-          } catch (error) {
-            
+        const loginResult =  loginMe(credenciales)
+        .then((respuesta) => {
+          const decoded = decodeToken(respuesta.data.data)
+          let datosBack = {
+            token: respuesta.data.data,
+            usuario: decoded
           }
-        }
+          console.log(datosBack);
+          
+          //redux credecniales
+            dispatch(login({ credentials: datosBack}));
+            
+          // useNavigate to /home
+          setTimeout(() => {
+            navigate("/");
+          }, 3000);
+        })
+        .catch((error) => console.log(error))
+
       } catch (error) {
         console.log(error);
       }
