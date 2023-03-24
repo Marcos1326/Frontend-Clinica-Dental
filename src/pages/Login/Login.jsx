@@ -50,12 +50,12 @@ export const Login = () => {
       <div>
         <Row>
         <Col className='txtDesignLogin'>
-            <p className='txtLogin'>¡Me alegra verte <br/> de nuevo Nakama!</p>
+            <p className='txtLogin'>¡Me alegra verte de nuevo!</p>
           </Col>
         </Row>
         <Row>
           <Col>
-            <img src="/src/img/pirata2.png" className='pirataDesign'/>
+            <img src="/src/img/pirata4.png" className='pirataDesign'/>
           </Col>
           <Col className='formDesign'>
             <div className='inputsDesign'>
