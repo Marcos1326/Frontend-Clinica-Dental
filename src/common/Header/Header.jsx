@@ -16,47 +16,49 @@ export const Header = () => {
 
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    console.log(datosCredencialRdx);
-  })
 //Funcion logout y redireccion a home
   const logoutFunction = () => {
     dispatch(userout({credentials: {}, token: ""}))
 
     setTimeout(() => {
       navigate("/");
-    }, 1000);
+    }, 500);
   }
 
   return (
     <div className='headerDesign'>
-      {datosCredencialRdx.credentials.token ? (
-        <div className='navbarDesign'>
+      <div className='navbarDesign'>
         <Navbar bg="dark" variant="dark" >
           <Container>
-            <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
-            <Nav className="d-flex">
-              <Nav.Link as={Link} to='/profile'>
-                {datosCredencialRdx?.credentials?.usuario?.email}
+                <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
+                <Nav className="d-flex">
+              <Nav.Link  className='perfil' as={Link} to='/profile'   onClick={()=>selected()}>
+                <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
               </Nav.Link>
-              <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
+              {datosCredencialRdx?.credentials?.usuario?.roleId === 3 ? (
+                <>
+                  <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
+                </>
+                ) : datosCredencialRdx?.credentials?.usuario?.roleId === 2 ? (
+                    <>
+                    <Nav.Link as={Link} to='/doctor'>Pacientes</Nav.Link>
+                    <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
+                  </>
+                  ) : datosCredencialRdx?.credentials?.usuario?.roleId === 1 ? (
+                    <>
+                    <Nav.Link as={Link} to='/admin'>Admin</Nav.Link>
+                    <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
+                    </>
+                    ) : (
+                    <>
+                  <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                  <Nav.Link as={Link} to='/register'>Register</Nav.Link>
+                </>
+                  )}
             </Nav>
           </Container>
         </Navbar>
       </div>
-      ) : (
-        <div className='navbarDesign'>
-        <Navbar bg="dark" variant="dark" >
-          <Container>
-            <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
-            <Nav className="d-flex">
-              <Nav.Link as={Link} to='/login'>Login</Nav.Link>
-              <Nav.Link as={Link} to='/register'>Register</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-        </div>
-      )}
     </div>
   )
 }

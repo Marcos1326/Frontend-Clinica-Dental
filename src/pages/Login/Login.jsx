@@ -13,6 +13,8 @@ import { useDispatch } from 'react-redux';
 
 export const Login = () => {
 
+  const [welcome, setWelcome] = useState("");
+
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -41,7 +43,6 @@ export const Login = () => {
             token: respuesta.data.data,
             usuario: decoded
           }
-          console.log(datosBack);
           
           //redux credecniales
             dispatch(login({ credentials: datosBack}));
@@ -49,7 +50,7 @@ export const Login = () => {
           // useNavigate to /home
           setTimeout(() => {
             navigate("/");
-          }, 3000);
+          }, 1000);
         })
         .catch((error) => console.log(error))
 
