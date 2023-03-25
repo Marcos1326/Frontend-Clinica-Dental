@@ -1,3 +1,7 @@
+.contDesign{
+    display: flex;
+}
+
 .navbarDesign{
     height: 10vh;
 }
@@ -11,3 +15,4 @@
         height: 0;
     }
 }
+

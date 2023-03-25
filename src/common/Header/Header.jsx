@@ -8,6 +8,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { userData, userout } from '../../pages/userSlice';
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 export const Header = () => {
 
   const dispatch = useDispatch();
@@ -30,30 +33,58 @@ export const Header = () => {
       <div className='navbarDesign'>
         <Navbar bg="dark" variant="dark" >
           <Container>
-                <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
-                <Nav className="d-flex">
-              <Nav.Link  className='perfil' as={Link} to='/profile'   onClick={()=>selected()}>
+            <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
+            <Nav className="d-flex">        
+              {/* <Nav.Link as={Link} to='/profile'   onClick={()=>selected()}>
                 <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
-              </Nav.Link>
+              </Nav.Link> */}
               {datosCredencialRdx?.credentials?.usuario?.roleId === 3 ? (
-                <>
-                  <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
-                </>
+                    <div>
+                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                        <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
+                          <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
+                        </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item eventKey="2" onClick={logoutFunction}>
+                        Logout
+                      </Dropdown.Item>
+                      </DropdownButton>
+                    </div>
                 ) : datosCredencialRdx?.credentials?.usuario?.roleId === 2 ? (
-                    <>
-                    <Nav.Link as={Link} to='/doctor'>Pacientes</Nav.Link>
-                    <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
-                  </>
+                    <div>
+                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                        <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
+                          <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
+                        </Dropdown.Item>
+                        <Dropdown.Item eventKey="2" as={Link} to='/doctor'>
+                          Pacientes
+                        </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item eventKey="3" onClick={logoutFunction}>
+                        Logout
+                      </Dropdown.Item>
+                      </DropdownButton>
+                    </div>
                   ) : datosCredencialRdx?.credentials?.usuario?.roleId === 1 ? (
-                    <>
-                    <Nav.Link as={Link} to='/admin'>Admin</Nav.Link>
-                    <Nav.Link onClick={logoutFunction}>Logout</Nav.Link>
-                    </>
+                    <div>
+                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                        <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
+                          <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
+                        </Dropdown.Item>
+                        <Dropdown.Item eventKey="2" as={Link} to='/admin'>
+                          Admin
+                        </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item eventKey="3" onClick={logoutFunction}>
+                        Logout
+                      </Dropdown.Item>
+                      </DropdownButton>
+                    </div>
                     ) : (
-                    <>
-                  <Nav.Link as={Link} to='/login'>Login</Nav.Link>
-                  <Nav.Link as={Link} to='/register'>Register</Nav.Link>
-                </>
+                    <div className='contDesign'>
+                      <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                      <Nav.Link as={Link} to='/register'>Register</Nav.Link>
+                    </div>
                   )}
             </Nav>
           </Container>
