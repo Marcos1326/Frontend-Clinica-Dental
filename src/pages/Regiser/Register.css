@@ -1,9 +1,5 @@
-body{
-    background-image: url(/src/img/Fondomar.jpg);
-    background-size: cover;
-}
-
 .registerDesign{
+    background-color: lightblue;
     height: 90vh;
     width: 100vw;
     display: flex;

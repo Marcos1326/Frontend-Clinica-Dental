@@ -1,5 +1,5 @@
 .homeDesign{
-    background-color: white;
+    background-color: lightblue;
     height: 90vh;
     width: 100vw;
 
@@ -7,4 +7,9 @@
     justify-content: center;
     align-items: center;
     
+}
+
+.imgDesign{
+    width: 50vw;
+    border-radius: 20px;
 }

@@ -1,12 +1,7 @@
-body{
-    background-image: url(/src/img/Fondomar.jpg);
-    background-size: cover;
-}
-
 .loginDesign{
     height: 90vh;
     width: 100vw;
-
+    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;

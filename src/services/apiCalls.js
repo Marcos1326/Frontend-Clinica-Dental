@@ -11,6 +11,7 @@ export const registerMe = async (body) => {
     return await axios.post(`${root}/register`,body)
     
 }
+
 export const getUserData = async (token) => {
     let config = {
         headers: { 
@@ -30,3 +31,12 @@ export const createAppointments = async (token) => {
     return await axios.post(`${root}/appointment`,config)
 }
 
+export const getAllAppointmentsUser = async (token) => {
+
+    var config = {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            };
+    return await axios.get(`${root}/appointment`,config)
+}

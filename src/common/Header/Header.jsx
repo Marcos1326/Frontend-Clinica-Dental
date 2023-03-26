@@ -44,7 +44,7 @@ export const Header = () => {
                         <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
                           <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
                         </Dropdown.Item>
-                        <Dropdown.Item eventKey="2" as={Link} to='/citas'>
+                        <Dropdown.Item eventKey="2" as={Link} to='/newcita'>
                           Citas
                         </Dropdown.Item>
                       <Dropdown.Divider />
