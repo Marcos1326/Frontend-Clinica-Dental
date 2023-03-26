@@ -17,7 +17,7 @@ export const Home = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>Bienvenido a la Clinica Grand Line</h3>
+              <h1>Bienvenido a la Clinica Grand Line</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -27,7 +27,7 @@ export const Home = () => {
               alt="Second slide"
             />
             <Carousel.Caption>
-            <h3>Bienvenido a la Clinica Grand Line</h3>
+            <h1>Bienvenido a la Clinica Grand Line</h1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -37,7 +37,7 @@ export const Home = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-            <h3>Bienvenido a la Clinica Grand Line</h3>
+            <h1>Bienvenido a la Clinica Grand Line</h1>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

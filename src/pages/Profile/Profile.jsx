@@ -39,7 +39,7 @@ export const Profile = () => {
             <div className='infoProfile2'>
               <Row>
                 <Col>
-                  Name
+                  <p className='txtDesign'>Name</p>
                   <div className='cuadroTxtDesign'>
                     {users.name}
                   </div>
@@ -47,7 +47,7 @@ export const Profile = () => {
               </Row>
               <Row>
                 <Col>
-                  Surname
+                  <p className='txtDesign'>Surname</p>
                   <div className='cuadroTxtDesign'>
                     {users.surname}
                   </div>
@@ -55,7 +55,7 @@ export const Profile = () => {
               </Row>
               <Row>
                 <Col>
-                  Phone
+                  <p className='txtDesign'>Phone</p>
                   <div className='cuadroTxtDesign'>
                     {users.phone}
                   </div>
@@ -63,7 +63,7 @@ export const Profile = () => {
               </Row>
               <Row>
                 <Col>
-                  Email
+                  <p className='txtDesign'>Email</p>
                   <div className='cuadroTxtDesign'>
                     {users.email}
                   </div>

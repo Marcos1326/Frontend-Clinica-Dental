@@ -85,7 +85,7 @@ export const Login = () => {
               <InputText
               type="password"
               name="password"
-              placeholder="pasword"
+              placeholder="password"
               changeFunction={(e) => inputHandler(e)}
               />
             </div>

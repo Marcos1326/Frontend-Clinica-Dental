@@ -32,19 +32,16 @@ export const Header = () => {
     <div className='headerDesign'>
       <div className='navbarDesign'>
         <Navbar bg="dark" variant="dark" >
-          <Container>
+          <Container className='txtDesign'>
             <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
             <Nav className="d-flex">        
-              {/* <Nav.Link as={Link} to='/profile'   onClick={()=>selected()}>
-                <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
-              </Nav.Link> */}
               {datosCredencialRdx?.credentials?.usuario?.roleId === 3 ? (
                     <div>
-                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                      <DropdownButton align="end" title="Perfil" id="dropdown-menu-align-end" menuVariant="dark">
                         <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
                           <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
                         </Dropdown.Item>
-                        <Dropdown.Item eventKey="2" as={Link} to='/newcita'>
+                        <Dropdown.Item eventKey="2" as={Link} to='/newcita' >
                           Citas
                         </Dropdown.Item>
                       <Dropdown.Divider />
@@ -55,11 +52,11 @@ export const Header = () => {
                     </div>
                 ) : datosCredencialRdx?.credentials?.usuario?.roleId === 2 ? (
                     <div>
-                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                      <DropdownButton align="end" title="Perfil" id="dropdown-menu-align-end" menuVariant="dark">
                         <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
                           <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
                         </Dropdown.Item>
-                        <Dropdown.Item eventKey="2" as={Link} to='/doctor'>
+                        <Dropdown.Item eventKey="2" as={Link} to='/doctor' >
                           Pacientes
                         </Dropdown.Item>
                       <Dropdown.Divider />
@@ -70,11 +67,11 @@ export const Header = () => {
                     </div>
                   ) : datosCredencialRdx?.credentials?.usuario?.roleId === 1 ? (
                     <div>
-                      <DropdownButton align="end" title="Info" id="dropdown-menu-align-end" menuVariant="dark">
+                      <DropdownButton align="end" title="Perfil" id="dropdown-menu-align-end" menuVariant="dark">
                         <Dropdown.Item eventKey="1" as={Link} to='/profile' onClick={()=>selected()}>
                           <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
                         </Dropdown.Item>
-                        <Dropdown.Item eventKey="2" as={Link} to='/admin'>
+                        <Dropdown.Item eventKey="2" as={Link} to='/admin' >
                           Admin
                         </Dropdown.Item>
                       <Dropdown.Divider />
@@ -85,7 +82,7 @@ export const Header = () => {
                     </div>
                     ) : (
                     <div className='contDesign'>
-                      <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                      <Nav.Link as={Link} to='/login' >Login</Nav.Link>
                       <Nav.Link as={Link} to='/register'>Register</Nav.Link>
                     </div>
                   )}

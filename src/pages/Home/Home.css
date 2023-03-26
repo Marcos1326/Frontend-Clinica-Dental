@@ -2,7 +2,7 @@
     background-color: lightblue;
     height: 90vh;
     width: 100vw;
-
+    font-family: 'Myfont';
     display: flex;
     justify-content: center;
     align-items: center;
