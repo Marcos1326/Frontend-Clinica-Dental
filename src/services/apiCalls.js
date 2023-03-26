@@ -20,3 +20,13 @@ export const getUserData = async (token) => {
     return await axios.get(`${root}/profile`,config)
     
 }
+
+export const createAppointments = async (token) => {
+    var config = {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            };
+    return await axios.post(`${root}/appointment`,config)
+}
+
