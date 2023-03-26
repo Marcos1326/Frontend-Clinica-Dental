@@ -40,3 +40,13 @@ export const getAllAppointmentsUser = async (token) => {
             };
     return await axios.get(`${root}/appointment`,config)
 }
+
+export const getAllUsersAdmin = async (token) => {
+
+    var config = {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            };
+    return await axios.get(`${root}/adminuser`,config)
+}
