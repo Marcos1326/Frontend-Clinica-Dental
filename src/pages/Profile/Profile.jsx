@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
 import Col from 'react-bootstrap/esm/Col'
+import { useSelector } from 'react-redux'
+import { getUserData } from '../../services/apiCalls'
+import { userData } from '../userSlice'
 import './Profile.css'
 
 export const Profile = () => {
+
+  const [users, setUsers] = useState ({
+    name: "",
+    surname: "",
+    phone: "",
+    email: "",
+  });
+
+  const ReduxCredentials = useSelector(userData);
+
+  useEffect(()=>{
+    if(users.name === ""){
+      getUserData(ReduxCredentials.credentials.token)
+      .then((result)=>{
+        setUsers({
+          name: result.data.name,
+          surname: result.data.surname,
+          phone: result.data.phone,
+          email: result.data.email,
+        });
+      })
+      .catch((error)=>console.log(error))
+    }
+  },[users]);
   return (
     <div className='profileDesign'>
       <div className='infoProfile'>
@@ -14,7 +41,7 @@ export const Profile = () => {
                 <Col>
                   Name
                   <div className='cuadroTxtDesign'>
-                    Name
+                    {users.name}
                   </div>
                 </Col>
               </Row>
@@ -22,7 +49,7 @@ export const Profile = () => {
                 <Col>
                   Surname
                   <div className='cuadroTxtDesign'>
-                    Surname
+                    {users.surname}
                   </div>
                 </Col>
               </Row>
@@ -30,7 +57,7 @@ export const Profile = () => {
                 <Col>
                   Phone
                   <div className='cuadroTxtDesign'>
-                    Phone
+                    {users.phone}
                   </div>
                 </Col>
               </Row>
@@ -38,15 +65,7 @@ export const Profile = () => {
                 <Col>
                   Email
                   <div className='cuadroTxtDesign'>
-                    Email
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  password
-                  <div className='cuadroTxtDesign'>
-                    password
+                    {users.email}
                   </div>
                 </Col>
               </Row>
