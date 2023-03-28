@@ -10,7 +10,7 @@
 
 .cardDesignAdmin{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 2em;
 }
 
@@ -21,4 +21,7 @@
     text-align: center;
     font-family: 'Myfont';
     font-size: xx-large;
+}
+body {
+    background-color: lightblue;
 }

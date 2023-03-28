@@ -1,0 +1,13 @@
+.cardDesignApp{
+    border: solid 2px black;
+    border-radius: 5px;
+    height: 20vh;
+    width: 20vw;
+    text-align: center;
+    font-family: 'Myfont';
+
+}
+
+.txtDesignCard{
+    padding: 20px;
+}
