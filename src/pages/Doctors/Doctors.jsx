@@ -16,6 +16,7 @@ export const Doctors = () => {
     try {
       const newcitas = await getAllAppointmentsDoctor(datosCredencialRdx.credentials?.token);
       setCitasDR(newcitas.data)
+      console.log(newc);
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +31,7 @@ export const Doctors = () => {
   return (
     <div className='doctorDesign'>
           <div className='cardDesign'>
-            {getCitasDR.map(Citas => {return <CardCita key={Citas.id} citas={Citas} />})}
+            {getCitasDR.map(CitasDr => {return <CardCita key={CitasDr.id} citas={CitasDr} />})}
           </div>
     </div>
     
