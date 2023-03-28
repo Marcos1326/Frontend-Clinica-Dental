@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import './Register.css'
 
+import pirata2 from '../../img/pirata2.png'
+import pirata3 from '../../img/pirata3.png'
+
 import { InputText } from '../../common/Input/Input';
 
 import Row from 'react-bootstrap/Row';
@@ -52,10 +55,8 @@ export const Register = () => {
           
         </Row>
         <Row>
-          <Col>
-            <img src="/src/img/pirata2.png" className='pirataDesign'/>
-          </Col>
           <Col className='formDesign'> 
+            <img src={pirata3} className='pirataDesign'/>
             <div className='inputsDesign'>
                 <InputText
                 type="text"
@@ -101,9 +102,6 @@ export const Register = () => {
                 Registrarse
               </button>
             </div>
-          </Col>
-          <Col >
-            <img src="/src/img/pirata3.png" className='pirataDesign'/>
           </Col>
         </Row>
       </div>

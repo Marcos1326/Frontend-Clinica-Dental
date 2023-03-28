@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './Header.css'
 
+import diente from '../../img/diente.png'
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -33,7 +35,7 @@ export const Header = () => {
       <div className='navbarDesign'>
         <Navbar bg="dark" variant="dark" >
           <Container className='txtDesign'>
-            <Navbar.Brand as={Link} to='/'><img src="/src/img/diente.png" className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
+            <Navbar.Brand as={Link} to='/'><img src={diente} className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
             <Nav className="d-flex">        
               {datosCredencialRdx?.credentials?.usuario?.roleId === 3 ? (
                     <div>

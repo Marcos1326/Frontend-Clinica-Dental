@@ -4,6 +4,8 @@ import './Login.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import pirata4 from '../../img/pirata4.png'
+
 import { InputText } from '../../common/Input/Input';
 import { loginMe } from '../../services/apiCalls';
 import { decodeToken } from 'react-jwt';
@@ -69,10 +71,8 @@ export const Login = () => {
           </Col>
         </Row>
         <Row>
-          <Col>
-            <img src="/src/img/pirata4.png" className='pirataDesign'/>
-          </Col>
           <Col className='formDesign'>
+            <img src={pirata4} className='pirataDesign'/>
             <div className='inputsDesign'>
               <InputText
                 type="email"
@@ -94,9 +94,6 @@ export const Login = () => {
                 Log Me
               </button>
             </div>
-          </Col>
-          <Col>
-            <img src="/src/img/diente.png" className='pirataDesign'/>
           </Col>
         </Row>
       </div>

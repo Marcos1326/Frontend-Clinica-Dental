@@ -1,5 +1,8 @@
 import React from 'react'
 import './Home.css'
+import clinica1 from "../../img/clinica1.jpg"
+import clinica2 from "../../img/clinica2.jpg"
+import clinica3 from "../../img/clinica3.jpg"
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -13,7 +16,7 @@ export const Home = () => {
           <Carousel.Item>
             <img
               className="d-block imgDesign"
-              src="/src/img/clinica1.jpg"
+              src={clinica1}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -23,7 +26,7 @@ export const Home = () => {
           <Carousel.Item>
             <img
               className="d-block imgDesign"
-              src="/src/img/clinica2.jpg"
+              src={clinica2}
               alt="Second slide"
             />
             <Carousel.Caption>
@@ -33,7 +36,7 @@ export const Home = () => {
           <Carousel.Item>
             <img
               className="d-block imgDesign"
-              src="/src/img/clinica3.jpg"
+              src={clinica3}
               alt="Third slide"
             />
             <Carousel.Caption>
