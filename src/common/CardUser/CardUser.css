@@ -5,3 +5,11 @@
     width: 20vw;
     font-family: 'Myfont';
 }
+
+@media (max-width: 992px){
+    .cardDesign{
+        height: 25vh;
+        width: 40vw;
+        font-size: small;
+    }
+}
