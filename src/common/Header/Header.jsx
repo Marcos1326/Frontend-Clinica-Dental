@@ -44,7 +44,7 @@ export const Header = () => {
                           <div>{datosCredencialRdx?.credentials?.usuario?.email}</div>
                         </Dropdown.Item>
                         <Dropdown.Item eventKey="2" as={Link} to='/newcita' >
-                          New Citas
+                          Solicitar cita
                         </Dropdown.Item>
                         <Dropdown.Item eventKey="2" as={Link} to='/cita' >
                           Citas
