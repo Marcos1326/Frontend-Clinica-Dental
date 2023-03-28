@@ -14,39 +14,27 @@ export const Admin = () => {
   const [getUsers, setUsers] = useState([])
 
   const datosCredentialsRdx = useSelector(userData)
+  
+  const getAllUsers = async () => {
+    try {
+      const usuarios = await getAllUsersAdmin(datosCredentialsRdx.credentials?.token);
+      setUsers(usuarios.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
-
-    if(getUsers.length == 0) {
-      
-      const getAllUsers = async () => {
-        try {
-          
-          const usuarios = await getAllUsersAdmin(datosCredentialsRdx.credentials?.token);
-          console.log(usuarios);
-          setUsers(usuarios.data)
-
-        } catch (error) {
-          console.log(error);
-        }
-      }
+    if(getUsers.length === 0) {
       getAllUsers();
     }
+  }, []);
 
-  }, [getUsers]);
-console.log(getUsers);
   return (
     <div className='adminDesign'>
-            <div >CLIENTS</div>
-            <div >
-
-            {getUsers.map(user => {
-                return (
-                        <CardUser key={user.id} usuario={user.name} />
-
-                )
-            })}
-            </div>
+      <div >
+        {getUsers.map(user => {return <CardUser key={user.id} usuario={user} />})}
+      </div>
     </div>
   )
 }
