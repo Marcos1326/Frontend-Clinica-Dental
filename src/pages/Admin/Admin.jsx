@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Admin.css'
 
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 import { getAllUsersAdmin } from '../../services/apiCalls'
-import { Container } from 'react-bootstrap'
 import { CardUser } from '../../common/CardUser/CardUser'
 
 export const Admin = () => {
@@ -32,9 +32,18 @@ export const Admin = () => {
 
   return (
     <div className='adminDesign'>
-      <div >
-        {getUsers.map(user => {return <CardUser key={user.id} usuario={user} />})}
-      </div>
+      <Row>
+        <Col className='txtDesignAdmin'>
+          <div>Usuarios Registrados</div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <div className='cardDesignAdmin'>
+            {getUsers.map(user => {return <CardUser key={user.id} usuario={user} />})}
+          </div>
+        </Col>
+      </Row>
     </div>
   )
 }

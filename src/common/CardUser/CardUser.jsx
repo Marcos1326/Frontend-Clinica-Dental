@@ -4,13 +4,11 @@ import './CardUser.css'
 import Card from 'react-bootstrap/Card';
 
 export function CardUser ({usuario}) {
-   
-  
 
   return (
     <div>
-        <Card>
-            <Card.Body>
+        <Card >
+            <Card.Body className='cardDesign'>
                 <Card.Title>{usuario.name}</Card.Title>
                 <Card.Text>
                     {usuario.surname}<br />
