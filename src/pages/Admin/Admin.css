@@ -2,7 +2,6 @@
     height: 90vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: lightblue;
     text-align: center;
@@ -11,7 +10,7 @@
 
 .cardDesignAdmin{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     gap: 2em;
 }
 

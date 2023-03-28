@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <div className='headerDesign'>
       <div className='navbarDesign'>
-        <Navbar bg="dark" variant="dark" >
+        <Navbar bg="dark" variant="dark">
           <Container className='txtDesign'>
             <Navbar.Brand as={Link} to='/'><img src={diente} className='imgNavbar'/>Clinica Grand Line</Navbar.Brand>
             <Nav className="d-flex">        

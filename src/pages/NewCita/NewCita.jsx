@@ -11,6 +11,7 @@ export const NewCita = () => {
     const navigate = useNavigate();
 
     const [credenciales, setCredenciales] = useState({
+        doctor_id: 1,
         date: "",
         hour: ""
     });
