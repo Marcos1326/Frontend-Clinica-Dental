@@ -3,15 +3,16 @@ import './CardUser.css'
 
 import Card from 'react-bootstrap/Card';
 
-export function CardUser ({user}) {
+export function CardUser ({usuario}) {
   return (
     <div>
         <Card>
             <Card.Body>
-                <Card.Title>{user}</Card.Title>
+                <Card.Title>{usuario}</Card.Title>
                 <Card.Text>
 
-                    {user} <br />
+                    {usuario.surname} <br />
+                    {usuario} <br />
                     
 
                 </Card.Text>

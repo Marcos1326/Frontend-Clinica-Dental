@@ -23,6 +23,7 @@ export const Admin = () => {
         try {
           
           const usuarios = await getAllUsersAdmin(datosCredentialsRdx.credentials?.token);
+          console.log(usuarios);
           setUsers(usuarios.data)
 
         } catch (error) {
@@ -33,7 +34,7 @@ export const Admin = () => {
     }
 
   }, [getUsers]);
-
+console.log(getUsers);
   return (
     <div className='adminDesign'>
             <div >CLIENTS</div>
@@ -41,7 +42,7 @@ export const Admin = () => {
 
             {getUsers.map(user => {
                 return (
-                        <CardUser key={user.id} usuario={user.User} />
+                        <CardUser key={user.id} usuario={user.name} />
 
                 )
             })}

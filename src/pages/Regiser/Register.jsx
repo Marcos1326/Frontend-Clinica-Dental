@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Register.css'
 
-import pirata2 from '../../img/pirata2.png'
 import pirata3 from '../../img/pirata3.png'
 
 import { InputText } from '../../common/Input/Input';

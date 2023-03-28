@@ -5,7 +5,7 @@ export const Citas = () => {
     
   return (
     <div className='citasDesign'>
-            
+      
     </div>
     
   )

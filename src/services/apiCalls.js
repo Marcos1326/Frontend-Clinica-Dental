@@ -23,13 +23,13 @@ export const getUserData = async (token) => {
     
 }
 
-export const createAppointments = async (token) => {
+export const createAppointments = async (token, body) => {
     var config = {
                 headers: {
                     'Authorization': 'Bearer ' + token,
                 }
             };
-    return await axios.post(`${root}/appointment`,config)
+    return await axios.post(`${root}/appointment`,body,config)
 }
 
 export const getAllAppointmentsUser = async (token) => {
