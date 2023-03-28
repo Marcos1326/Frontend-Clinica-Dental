@@ -6,6 +6,9 @@ import { getAllAppointmentsUser } from '../../services/apiCalls';
 import { userData } from '../userSlice';
 import './Citas.css'
 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 export const Citas = () => {
   
   const navigate =useNavigate();
@@ -30,9 +33,18 @@ export const Citas = () => {
   
   return (
     <div className='citasDesign'>
+      <Row>
+        <Col className='txtDesignCitas'>
+        <div>Tus citas</div>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <div className='cardDesignAdmin'>
             {getCitas.map(Citas => {return <CardCita key={Citas.id} citas={Citas} />})}
           </div>
+        </Col>
+      </Row>
     </div>
     
   )

@@ -9,9 +9,9 @@ export function CardUser ({usuario}) {
     <div>
         <Card >
             <Card.Body className='cardDesign'>
-                <Card.Title>{usuario.name}</Card.Title>
+                <Card.Title><h3>{usuario.name}</h3></Card.Title>
                 <Card.Text>
-                    {usuario.surname}<br />
+                    <h5>{usuario.surname}</h5>
                     {usuario.phone}<br />
                     {usuario.email}<br />
                 </Card.Text>

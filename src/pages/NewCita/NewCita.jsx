@@ -40,7 +40,7 @@ export const NewCita = () => {
   return (
     <div className='citasDesign'>
         <div className='newCitaDesign'>
-            <div>NEW APPOINTMENT</div>
+            <div className='txtDesign'>Crea tu cita aquí</div>
 
             <InputText
                 type="date"
