@@ -23,7 +23,7 @@ export const getUserData = async (token) => {
     
 }
 
-export const createAppointments = async (token, body) => {
+export const createAppointments = async (body,token) => {
     var config = {
                 headers: {
                     'Authorization': 'Bearer ' + token,

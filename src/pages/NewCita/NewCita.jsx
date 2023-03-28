@@ -6,7 +6,7 @@ import { createAppointments } from '../../services/apiCalls';
 import { userData } from '../userSlice';
 import './NewCita.css'
 
-export const Citas = () => {
+export const NewCita = () => {
 
     const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ export const Citas = () => {
             .then(
                 userData => {
                     setTimeout(() => {
-                        navigate("/citas")
+                        navigate("/cita")
                     }, 1000);
                 }
             )

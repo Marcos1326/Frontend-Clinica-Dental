@@ -1,10 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Admin } from '../Admin/Admin'
+import { Citas } from '../Citas/Citas'
 import { Doctors } from '../Doctors/Doctors'
 import { Home } from '../Home/Home'
 import { Login } from '../Login/Login'
-import { Citas } from '../NewCita/NewCita'
+import { NewCita } from '../NewCita/NewCita'
 import { Profile } from '../Profile/Profile'
 
 import { Register } from '../Regiser/Register'
@@ -19,7 +20,8 @@ export const Body = () => {
         <Route path='/profile' element={<Profile />}/>
         <Route path='/admin' element={<Admin />}/>
         <Route path='/doctor' element={<Doctors />}/>
-        <Route path='/newcita' element={<Citas />}/>
+        <Route path='/cita' element={<Citas />}/>
+        <Route path='/newcita' element={<NewCita />}/>
       </Routes>
     </>
   )
