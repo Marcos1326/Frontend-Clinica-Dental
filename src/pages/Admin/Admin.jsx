@@ -37,8 +37,8 @@ export const Admin = () => {
           <div>Usuarios Registrados</div>
         </Col>
       </Row>
-      <Row>
-        <Col>
+      <Row >
+        <Col className='carduserDesign'>
           <div className='cardDesignAdmin'>
             {getUsers.map(user => {return <CardUser key={user.id} usuario={user} />})}
           </div>

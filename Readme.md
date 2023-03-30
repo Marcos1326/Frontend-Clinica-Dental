@@ -26,6 +26,32 @@ Seguimos trabajando creando nuestra aplicación web de Consultorio Dental. Traba
 </div>
 
 ## Vistas
+<table>
+    <tr>
+        <td>
+            <img src="./src/img/RegistroClinica.png">
+        </td>
+        <td>
+            <img src="./src/img/LoginClinica.png">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="./src/img/perfil.png">
+        </td>
+        <td>
+            <img src="./src/img/cperfil1.png">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="./src/img/crearcita.png">
+        </td>
+        <td>
+            <img src="./src/img/citas.png">
+        </td>
+    </tr>
+</table>
 
 ## Stack
 <div align="center">
@@ -61,17 +87,12 @@ Seguimos trabajando creando nuestra aplicación web de Consultorio Dental. Traba
 </a>
 </div>
 
-## Future functionaly
-⬜ Search and filter tool to find a user or an appointment
-⬜ Add a Superadmin role able to assign roles to our users
-
 ## License
-This project has been created under a MIT License. To learn more about the details go to LICENSE.md. 
+Este proyecto ha sido creado bajo una Licencia MIT. Para obtener más información sobre los detalles, vaya a LICENSE.md.
 
 ## Agradecimientos:
 
-I want to thank my GeekHub mentors for all the support they have given us everyday:
-
+Quiero agradecer a mis mentores de GeekHub por todo el apoyo que nos han brindado todos los días:
 - **Dani**  
 <a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
 
@@ -86,8 +107,8 @@ I want to thank my GeekHub mentors for all the support they have given us everyd
 
 ## Contacto
 
-Feel free to contact me anytime, to help you with your project with React or to give me some feedback. Happy to hear from you.
+No dude en ponerse en contacto conmigo en cualquier momento, para ayudarlo con su proyecto con React o para darme su opinión.
 
-<a href = "mailto:folguera.ramon@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/ram%C3%B3n-folguera-0ab32776/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<a href = "https://github.com/Marcos1326"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a>
+<a href="https://www.linkedin.com/in/marcosgarridofsd/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p>
