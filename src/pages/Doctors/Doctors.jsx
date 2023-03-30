@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { CardCita } from '../../common/CardCitas/CardCita';
-import { getAllAppointmentsDoctor, getAllAppointmentsUser } from '../../services/apiCalls';
+import { getAllAppointmentsDoctor } from '../../services/apiCalls';
 import { userData } from '../userSlice';
 import './Doctors.css'
 
@@ -23,10 +23,14 @@ export const Doctors = () => {
   }
   
   useEffect(() => {
-    if(getCitasDR.length === 0) {
-      getAllCitasDR();
+    if (getCitasDR.length === 0) {
+      getAllAppointmentsDoctor(datosCredencialRdx.credentials.token)
+        .then((respuesta) => {
+          setCitasDR(respuesta.data);
+        })
+        .catch((error) => console.log(error));
     }
-  }, []);
+  }, [getCitasDR]);
   
   return (
     <div className='doctorDesign'>
