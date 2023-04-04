@@ -19,7 +19,8 @@ En este proyecto se nos pedia hacer un frontend conectado mediante axios a nuest
 
 ## Sobre el proyecto 🔎
 Seguimos trabajando creando nuestra aplicación web de Consultorio Dental. Trabajé para que todos esos puntos finales que trabajamos en el backend funcionaran perfectamente en el frontend. Para ello necesitaba que la web permitiera a los usuarios registrarse, iniciar sesión, reservar citas... etc. Y acceder a la web con diferentes roles: médico, paciente y administrador.
-  
+El proyecto aún se encuentra en periodo de desarrollo.
+
 ## Deploy 🚀
 <div align="center">
     <a href="https://clinica.d8nnbcil63dk6.amplifyapp.com/"><strong>Url Deploy Clinica Grand Line</strong></a>🚀
