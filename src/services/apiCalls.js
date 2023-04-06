@@ -43,12 +43,12 @@ export const getAllAppointmentsUser = async (token) => {
 }
 export const getAllAppointmentsDoctor = async (token) => {
 
-    var config = {
-                headers: {
-                    'Authorization': 'Bearer ' + token,
-                }
-            };
-            console.log(config);
+    const config = {
+        headers: {
+            'Authorization': `Bearer ${token}`
+            }
+        };
+        
     return await axios.get(`${root}/appointmentDr`,config)
 }
 

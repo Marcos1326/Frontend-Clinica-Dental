@@ -4,7 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { CardCita } from '../../common/CardCitas/CardCita';
 import { getAllAppointmentsDoctor } from '../../services/apiCalls';
 import { userData } from '../userSlice';
+import { Row } from 'react-bootstrap';
+import Col from "react-bootstrap/Col";
+
 import './Doctors.css'
+
 
 export const Doctors = () => {
   const navigate =useNavigate();
@@ -16,11 +20,11 @@ export const Doctors = () => {
     try {
       const newcitas = await getAllAppointmentsDoctor(datosCredencialRdx.credentials?.token);
       setCitasDR(newcitas.data)
-      console.log(newc);
     } catch (error) {
       console.log(error);
     }
   }
+
   
   useEffect(() => {
     if (getCitasDR.length === 0) {
@@ -34,9 +38,20 @@ export const Doctors = () => {
   
   return (
     <div className='doctorDesign'>
-          <div className='cardDesign'>
-            {getCitasDR.map(CitasDr => {return <CardCita key={CitasDr.id} citas={CitasDr} />})}
-          </div>
+      <Row>
+        <Col className="txtDesignAdmin">
+          <div>Citas</div>
+        </Col>
+      </Row>
+      <Row className="cardDesignAdmin justify-content-center mb-4">
+        {getCitasDR.map(CitasDr => {
+          return (
+            <Col key={CitasDr.id} md={3} s={11}>
+              <CardCita citas={CitasDr} />
+            </Col>
+            )
+          })}
+      </Row>
     </div>
     
   )

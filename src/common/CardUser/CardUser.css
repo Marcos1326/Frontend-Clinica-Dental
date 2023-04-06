@@ -1,15 +1,7 @@
 .cardDesign{
     border: solid 2px black;
     border-radius: 5px;
-    height: 20vh;
-    width: 20vw;
+    height: 100%;
+    width: 100%;
     font-family: 'Myfont';
-}
-
-@media (max-width: 992px){
-    .cardDesign{
-        height: 25vh;
-        width: 40vw;
-        font-size: small;
-    }
 }

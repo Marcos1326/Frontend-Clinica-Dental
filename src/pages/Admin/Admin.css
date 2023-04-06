@@ -1,16 +1,12 @@
 .adminDesign{
-    height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    background-color: lightblue;
     text-align: center;
     flex-direction: column;
 }
 
 .cardDesignAdmin{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 2em;
 }
 
@@ -26,13 +22,7 @@ body {
     background-color: lightblue;
 }
 
-@media (max-width: 992px){
-    .cardDesignAdmin{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .carduserDesign{
-    flex-wrap: wrap;
+    width: 100%;
 
 }

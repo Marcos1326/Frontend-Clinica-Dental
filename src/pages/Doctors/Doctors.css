@@ -3,6 +3,11 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: lightblue;
     align-items: center;
+    
 }
+
+.cardDesign{
+    border: 0;
+}
+

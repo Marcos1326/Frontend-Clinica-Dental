@@ -11,7 +11,7 @@ export function CardUser ({usuario}) {
             <Card.Body className='cardDesign'>
                 <Card.Title><h3>{usuario.name}</h3></Card.Title>
                 <Card.Text>
-                    <h5>{usuario.surname}</h5>
+                    {usuario.surname}<br/>
                     {usuario.phone}<br />
                     {usuario.email}<br />
                 </Card.Text>
